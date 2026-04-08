@@ -1,8 +1,16 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import PortalPage from "./pages/PortalPage";
+import MemberPage from "./pages/MemberPage";
+
 export default function App() {
   return (
-    <div style={{ background: "black", color: "white", minHeight: "100vh", padding: "24px" }}>
-      <h1>SafeSlip Engine</h1>
-      <p>Deployment test successful.</p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/portal" element={<PortalPage />} />
+        <Route path="/member" element={<MemberPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
